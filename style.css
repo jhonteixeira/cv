@@ -38,6 +38,7 @@ main {
   border-left: 1px solid black;
   padding-left: 20px;
   height: 100%;
+  overflow-y: auto;
 }
 
 hr {
