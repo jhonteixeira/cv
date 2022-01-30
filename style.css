@@ -24,6 +24,8 @@ aside {
   padding: 10px;
   padding-top: 100px;
   text-align: center;
+  background-color: #87cefa;
+  height: 100%;
 }
 
 aside img {
@@ -108,7 +110,7 @@ a {
 }
 
 a:hover {
-  color: green;
+  color: #000;
 }
 
 #my-name {
