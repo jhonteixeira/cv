@@ -3,8 +3,9 @@
     --ice-color: #DBF1FD;
 }
 
-html, body {
+html, body, ul {
     margin: 0;
+    padding: 0;
 }
 
 #root {
@@ -16,12 +17,15 @@ html, body {
     margin: var(--margin) auto;
 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #left {
     color: white;
     background-color: var(--main-color);
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #right {
@@ -50,6 +54,11 @@ html, body {
     justify-content: center;
 }
 
+.align-end {
+    margin-block-start: auto;
+}
+
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -62,6 +71,9 @@ a {
 #contact ul {
     list-style: none;
     line-height: 2em;
+    font-size: 0.9em;
+    white-space: nowrap;
+    padding: 1em;
 }
 
 #contact i {
@@ -74,7 +86,92 @@ a {
     border-bottom: 1px solid var(--ice-color)
 }
 
-@media (max-width: 400px) {
+.progress-list li {
+    width: 100%;
+    white-space: nowrap;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.progress-list li .title {
+    flex: 1;
+}
+
+.progress-list .progress {
+    display: inline-block;
+    height: 0.7em;
+    width: 100%;
+    background-color: #f0f0f0;
+    width: 80%;
+    flex: 1.5;
+}
+
+.progress-list .progress div {
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+
+#experience li {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0.5em;
+    grid-template-areas:
+        "date title"
+        "employer body";
+    font-size: 0.8em;
+    margin: 1em 0;
+}
+
+#experience .date {
+    grid-area: date;
+}
+
+#experience .title {
+    grid-area: title;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#experience .employer {
+    grid-area: employer;
+}
+
+#experience .body {
+    grid-area: body;
+    text-align: justify;
+}
+
+#education li {
+    list-style: none;
+    line-height: 2em;
+}
+
+#education li .date {
+    font-size: 0.8em;
+}
+
+#education li .course {
+    font-weight: bold;
+}
+
+#contact {
+    padding: 2em;
+}
+
+#name {
+    font-size: 1.5em;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
     #root {
         flex-direction: column;
     }
@@ -99,11 +196,18 @@ a {
 
     #name {
         grid-area: name;
-        font-size: 1.5em;
     }
 
     #role {
         grid-area: role;
     }
 
+    .divider {
+        margin: 1em auto;
+        width: 90%;
+    }
+
+    #contact {
+        padding: initial;
+    }
 }

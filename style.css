@@ -8,8 +8,8 @@ ul li {
 }
 
 ul li:hover {
-    background-color: cyan;
-    border-color: cyan;
+  background-color: cyan;
+  border-color: cyan;
 }
 
 ul {
@@ -71,12 +71,10 @@ meter {
 meter::-moz-meter-bar {
   border-radius: 20px;
   background: #1b3d81;
-  background: linear-gradient(
-    0deg,
-    #1b3d81 0%,
-    rgba(255, 255, 255, 0.5) 70%,
-    #1b3d81 100%
-  );
+  background: linear-gradient(0deg,
+      #1b3d81 0%,
+      rgba(255, 255, 255, 0.5) 70%,
+      #1b3d81 100%);
 }
 
 main section h1 {
@@ -116,4 +114,10 @@ a:hover {
 #my-name {
   text-decoration: underline;
   margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  main * {
+    background-color: red;
+  }
 }
