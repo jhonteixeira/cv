@@ -59,6 +59,9 @@ html, body, ul {
     margin-block-start: auto;
 }
 
+.oneline {
+    white-space: nowrap;
+}
 
 a {
     color: inherit;
