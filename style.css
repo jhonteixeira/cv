@@ -175,6 +175,10 @@ a {
     text-overflow: ellipsis;
 }
 
+#profile {
+    text-align: left;
+}
+
 @media (max-width: 600px) {
     #root {
         flex-direction: column;
